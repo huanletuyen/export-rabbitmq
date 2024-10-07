@@ -21,33 +21,46 @@
 
 ### Cài đặt các thư viện cần thiết
 
-Bạn có thể cài đặt các thư viện cần thiết bằng lệnh:
-
+Bạn có thể cài đặt và install  các thư viện cần thiết bằng lệnh:
+B1: thực hiện chạy lệnh dưới cấp quyền thực thi cho file install
 ```bash
-chmod +x install.sh
+chmod +x install.sh 
+```
+B2: Thực hiện chay lệnh install để cài đặt các thư viện cần thiết
+```bash
+./install.sh
+```
 
 ## Sử dụng
-- **Export Queue:**
+### **Export Queue:**
+```bash
+blue-rabbitmq.sh --export-data --queue=QUEUE_NAME --host=HOST --username=USERNAME --password=PASSWORD --output-file=exported_messages.txt
+```
 
-    ```bash
-    ./blue-rabbitmq.sh --export-data --queue=QUEUE_NAME --host=HOST --username=USERNAME --password=PASSWORD --output-file=exported_messages.txt
-
+Trong đó các đối số của dòng lệnh được giải thích như sau
+```bash
     --export-data: Thực hiện chức năng xuất queue.
     --queue=QUEUE_NAME: Tên của queue cần export.
     --host=HOST: Địa chỉ máy chủ RabbitMQ.
     --username=USERNAME: Tên người dùng RabbitMQ.
     --password=PASSWORD: Mật khẩu của người dùng RabbitMQ.
     --output-file=OUTPUT_FILE: File để lưu các thông điệp và thuộc tính xuất ra.
-- **Import Queue:**
+```
+### **Import Queue:**
+```bash
+blue-rabbitmq.sh --import-data --queue=QUEUE_NAME --host=HOST --username=USERNAME --password=PASSWORD --input-file=import_messages.txt
+```
+Trong đó các dối số được của dòng lệnh được giải thích như sau:
+```bash
+--import-data: Thực hiện chức năng nhập queue.
+--queue=QUEUE_NAME: Tên của queue cần import.
+--input-file=INPUT_FILE: File chứa các thông điệp và thuộc tính để nhập vào queue.
+--host=HOST: Địa chỉ máy chủ RabbitMQ.
+--username=USERNAME: Tên người dùng RabbitMQ.
+--password=PASSWORD: Mật khẩu của người dùng RabbitMQ.
+```
 
-    ```bash
-    ./blue-rabbitmq.sh --import --number-queue=QUEUE_NAME --host=HOST --username=USERNAME --password=PASSWORD --input-file=import_messages.txt
-
-    --import: Thực hiện chức năng nhập queue.
-    --queue=QUEUE_NAME: Tên của queue cần import.
-    --input-file=INPUT_FILE: File chứa các thông điệp và thuộc tính để nhập vào queue.
-    --host=HOST: Địa chỉ máy chủ RabbitMQ.
-    --username=USERNAME: Tên người dùng RabbitMQ.
-    --password=PASSWORD: Mật khẩu của người dùng RabbitMQ.
-Lưu Ý
+### Lưu ý
 Nếu không cung cấp đối số nào khi chạy script, bạn sẽ nhận được hướng dẫn sử dụng để biết cách cung cấp các đối số cần thiết.
+## Liên Hệ:
+Email: habeckbka@gmail.com
