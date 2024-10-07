@@ -22,11 +22,16 @@
 ### Cài đặt các thư viện cần thiết
 
 Bạn có thể cài đặt và install  các thư viện cần thiết bằng lệnh:
-B1: thực hiện chạy lệnh dưới cấp quyền thực thi cho file install
+B1: clone git về local
+```bash
+git clone https://github.com/huanletuyen/export-rabbitmq.git
+cd export-rabbitmq
+```
+B2: thực hiện chạy lệnh dưới cấp quyền thực thi cho file install
 ```bash
 chmod +x install.sh 
 ```
-B2: Thực hiện chay lệnh install để cài đặt các thư viện cần thiết
+B3: Thực hiện chay lệnh install để cài đặt các thư viện cần thiết
 ```bash
 ./install.sh
 ```
